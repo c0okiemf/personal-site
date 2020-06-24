@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "app.telegram.bot",
+      "type": "java.lang.String",
+      "description": "Description for app.telegram-key."
+    },
+    {
+      "name": "app.telegram.chat-id",
+      "type": "java.lang.String",
+      "description": "Description for app.telegram.chat-id."
+    },
+    {
+      "name": "app.mysql.username",
+      "type": "java.lang.String",
+      "description": "Description for app.mysql.username."
+    },
+    {
+      "name": "app.mysql.pwd",
+      "type": "java.lang.String",
+      "description": "Description for app.mysql.pwd."
+    },
+    {
+      "name": "app.mysql.url",
+      "type": "java.lang.String",
+      "description": "Description for app.mysql.url."
+    }
+  ] }

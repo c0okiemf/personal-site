@@ -1,0 +1,240 @@
+@font-face
+  font-family: 'title'
+  src: url('../font/Philosopher-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'title'
+  src: url('../font/Philosopher-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+@font-face
+  font-family: 'hack'
+  src: url('../font/Hack-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+html
+  width: auto
+  height: 100%
+  font-size: 1.2vh
+  overflow: hidden
+  box-sizing: border-box
+  *, *:before, *:after
+    box-sizing: inherit
+  body
+    margin: 0
+    height: 100%
+    background-color: black
+  div
+    position: relative
+#app
+  height: 100%
+
+.base-view
+  height: 100%
+  .introduction-view
+    height: 100%
+    .top-half
+      height: 40%
+      background-color: #000
+      .particles-canvas-wrapper
+        height: 100%
+    .bottom-half
+      width: 100%
+      height: 60%
+      background-color: #000000
+      position: relative
+      box-shadow: 0px -5px 23px 60px #000000
+      z-index: 1
+      .greeting
+        left: 50%
+        position: relative
+        top: 30%
+        height: auto
+        width: auto
+        transform: translateX(-50%)
+        display: block
+        font-size: 2rem
+        font-family: 'title', serif
+        font-weight: bold
+        color: white
+        .flex
+          display: flex
+          justify-content: center
+        .top
+          overflow: hidden
+        .bottom
+          overflow: hidden
+    .photo
+      width: 20vh
+      height: 20vh
+      left: 50%
+      transform: translate(-50%, -65%)
+      border-radius: 50%
+      box-shadow: 0 0 100px 100px #000000
+      background-image: url(../img/profile.jpg)
+      background-position: top
+      background-size: cover
+      z-index: 2
+      position: absolute
+  .summary-view
+    height: 100%
+    background: black
+    display: flex
+    font-family: hack, monospace
+    .left-block
+      width: 30vw
+      min-width: 294px
+      padding: 20vh 4vw 20vh 4vw
+      background: black
+      color: white
+      z-index: 2
+      box-shadow: 0 0 10px 10px black
+      .languages
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .head
+          font-size: 1.9rem
+          font-weight: bold
+        .item
+          padding-left: 10%
+          font-size: 1.5rem
+          .frameworks
+            padding-left: 10%
+            font-size: 1rem
+    .main-block
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      background: linear-gradient(to top, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 30vh), linear-gradient(to right, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), linear-gradient(to bottom, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 30vh), linear-gradient(to left, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), white
+      align-items: center
+      .summary-block
+        max-width: 40vw
+        margin-bottom: 16vh
+        .head
+          font-size: 1.9rem
+          font-weight: bold
+        .text
+          padding-top: 8%
+          padding-right: 5%
+          font-size: 1.5rem
+      .links-block
+        max-width: 40vw
+        width: 100%
+        .head
+          font-size: 1.9rem
+          font-weight: bold
+        .links
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          width: 45vw
+          max-width: 600px
+          padding-top: 5%
+          z-index: 2
+          img
+            height: 16vw
+            max-height: 200px
+  .feedback-view
+    width: 100%
+    height: 100%
+    font-family: hack,monospace
+    .floater
+      height: 50vh
+      top: 50%
+      transform: translateY(-50%)
+      font-size: 2rem
+      color: white
+      width: 100%
+      max-width: 800px
+      margin: 0 auto
+      .form
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        height: 100%
+        margin-top: 5vh
+        input
+          height: 5vh
+          margin-bottom: 1vh
+          background-color: #1e242c
+          color: white
+          border: 1px solid gray
+          font-size: 1.2rem
+        textarea
+          min-height: 200px
+          margin: 0 0 12.9792px
+          max-width: 100%
+          height: 415px
+          min-width: 100%
+          width: 717px
+          background-color: #1e242c
+          color: white
+          border: 1px solid gray
+          font-size: 1.2rem
+        button
+          background-color: #ffffff00
+          height: 5vh
+          cursor: pointer
+          text-transform: uppercase
+          font-size: 1.5rem
+          color: white
+          border: 1px solid gray
+          animation: light-down .3s
+          font-family: hack
+        button:hover
+          animation: light-up .3s forwards
+      .done
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        margin-top: 5vh
+        .message
+          opacity: 0
+          animation: opacity 5s forwards
+
+
+.arrow-component-wrapper
+  width: 10vh
+  height: 10vh
+  display: block
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  cursor: pointer
+  z-index: 3
+  .arrow-canvas-wrapper
+    width: 100%
+    height: 100%
+.arrow-component-wrapper.top
+  bottom: unset
+  top: 0
+  transform: translateX(-50%) rotateZ(180deg)
+
+@keyframes light-up
+  from
+    color: white
+    background-color: #ffffff00
+  to
+    color: black
+    background-color: #ffffffff
+@keyframes light-down
+  from
+    color: black
+    background-color: #ffffffff
+  to
+    color: white
+    background-color: #ffffff00
+
+@keyframes opacity
+  from
+    opacity: 0
+  to
+    opacity: 1
+
