@@ -1,11 +1,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-// const process = require('process');
+const process = require('process');
 
-// if(process.env.npm_lifecycle_script.search(/production/g) !== -1){
-//     console.log('this is visible in development');
-// }
-
-module.exports = {
+let config = {
     entry: './src/main/resources/js/app.js',
     module: {
         rules: [
@@ -44,3 +40,10 @@ module.exports = {
         filename: 'app.js'
     }
 };
+
+if(process.env.npm_lifecycle_script.search(/production/g) !== -1){
+    const MinifyPlugin = require("babel-minify-webpack-plugin");
+    config.plugins.push(new MinifyPlugin())
+}
+
+module.exports = config;

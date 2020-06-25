@@ -10,7 +10,7 @@
         <div class="photo"></div>
         <div class="bottom-half">
             <div class="greeting">
-                <div class="flex top">Greetings, my name is Igor Pichugin</div>
+                <div class="flex top">Greetings, my name is Harry Pichugin</div>
                 <div class="flex bottom">I am a full-stack developer.</div>
             </div>
             <div @click="$emit('slideDown')" class="arrow-component-wrapper">

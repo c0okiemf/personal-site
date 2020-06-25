@@ -89,12 +89,25 @@
 
             }
         },
-        mounted() {
+        activated() {
             document.querySelectorAll('.item').forEach((el, i) => {
                 setTimeout(() => {
                     el.animate([
                         {transform: 'translateX(-20vw)'},
                         {transform: 'unset'}
+                    ], {
+                        duration: 1000,
+                        fill: 'forwards'
+                    });
+                }, 100 * i);
+            });
+        },
+        deactivated() {
+            document.querySelectorAll('.item').forEach((el, i) => {
+                setTimeout(() => {
+                    el.animate([
+                        {transform: 'unset'},
+                        {transform: 'translateX(-20vw)'}
                     ], {
                         duration: 1000,
                         fill: 'forwards'

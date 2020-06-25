@@ -25,5 +25,8 @@
     "dev": "webpack --config webpack.config.js --mode=development",
     "watch": "webpack --config webpack.config.js --watch --mode=development",
     "prod": "webpack --config webpack.config.js --mode=production"
+  },
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.1"
   }
 }
