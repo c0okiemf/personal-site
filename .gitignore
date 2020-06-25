@@ -31,6 +31,8 @@ build/
 .vscode/
 
 application.properties
-*.log
+*.log*
 node_modules
 lib
+
+deploy.sh
