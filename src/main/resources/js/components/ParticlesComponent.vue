@@ -25,7 +25,7 @@
                 bgColor: 'rgb(0,0,0)',
                 hoverFillStyle: 'rgb(255,255,255)',
                 hoverRadius: 200,
-                characters: 'IGORPICHUGIN',
+                characters: 'HARRYPICHUGIN',
                 interval: null
             }
         },
