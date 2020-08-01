@@ -14,6 +14,7 @@
                 <div class="flex bottom">I am a full-stack developer.</div>
             </div>
             <div @click="$emit('slideDown')" class="arrow-component-wrapper">
+                <div class="arrow-name">Summary</div>
                 <canvas-component :wrapperClass="['arrow-canvas-wrapper']">
                     <arrow-component></arrow-component>
                 </canvas-component>

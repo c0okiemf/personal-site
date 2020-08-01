@@ -1,6 +1,7 @@
 <template>
     <div class="summary-view">
         <div @click="$emit('slideUp')" class="arrow-component-wrapper top">
+            <div class="arrow-name">Home</div>
             <canvas-component :wrapperClass="['arrow-canvas-wrapper']">
                 <arrow-component></arrow-component>
             </canvas-component>
@@ -14,24 +15,27 @@
                     <div class="language">PHP</div>
                     <div class="frameworks">
                         <div class="f-item">Laravel</div>
+                        <div class="f-item">Symfony</div>
                         <div class="f-item">Bitrix</div>
+                        <div class="f-item">WordPress</div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="language">Java</div>
                     <div class="frameworks">
-                        <div class="f-item">Spring</div>
+                        <div class="f-item">Spring Boot</div>
                     </div>
                 </div>
-                <div class="item">C#</div>
                 <div class="item">
                     <div class="language">JavaScript</div>
                     <div class="frameworks">
                         <div class="f-item">Vue</div>
                         <div class="f-item">React</div>
                         <div class="f-item">Marionette</div>
-                        <div class="f-item">JQuery</div>
                     </div>
+                </div>
+                <div class="item">
+                    <div class="language">Elm</div>
                 </div>
                 <div class="item">
                     <div class="language">CSS</div>
@@ -40,11 +44,12 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="language">Misc</div>
+                    <div class="language">Other</div>
                     <div class="frameworks">
+                        <div class="f-item">Testing</div>
+                        <div class="f-item">Linux</div>
                         <div class="f-item">Docker</div>
                         <div class="f-item">CI</div>
-                        <div class="f-item">Linux</div>
                     </div>
                 </div>
             </div>
@@ -56,8 +61,19 @@
                     Summary
                 </div>
                 <div class="text">
-                    My greatest passion is solving complex problems elegantly and concisely.
-                    I deeply enjoy being a software developer and appreciate doing what I love for a living.
+                    I am a full-stack web developer experienced in all stages of the application lifecycle.
+                    I worked with UI (implementing responsive designs, SPAs), worked on setting up continuous
+                    integration for a very heavyweight website with many external dependencies, actively supplement
+                    code with testing. I also have experience in designing and implementing database structures used
+                    in real-world business applications.
+                    <br>
+                    <br>
+                    I have a solid understanding of what my code does and why and double-check it so that my colleagues
+                    don't have any trouble understanding it either. I am aware of common OOP patterns and put them
+                    in good use where applicable.
+                    <br>
+                    <br>
+                    In my spare time, I practice functional programming with Elm and learn game development.
                 </div>
             </div>
             <div class="links-block">
@@ -75,6 +91,7 @@
             </div>
         </div>
         <div @click="$emit('slideDown')" class="arrow-component-wrapper">
+            <div class="arrow-name">Contact me</div>
             <canvas-component :wrapperClass="['arrow-canvas-wrapper']">
                 <arrow-component></arrow-component>
             </canvas-component>

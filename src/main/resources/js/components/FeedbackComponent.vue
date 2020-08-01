@@ -1,6 +1,7 @@
 <template>
     <div class="feedback-view">
         <div @click="$emit('slideUp')" class="arrow-component-wrapper top">
+            <div class="arrow-name">Summary</div>
             <canvas-component :wrapperClass="['arrow-canvas-wrapper']">
                 <arrow-component></arrow-component>
             </canvas-component>

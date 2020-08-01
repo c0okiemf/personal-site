@@ -110,18 +110,18 @@ html
       display: flex
       flex-direction: column
       justify-content: center
-      background: linear-gradient(to top, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 30vh), linear-gradient(to right, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), linear-gradient(to bottom, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 30vh), linear-gradient(to left, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), white
+      background: linear-gradient(to top, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 20vh), linear-gradient(to right, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), linear-gradient(to bottom, black, black 15vh, #000000a3, #00000045, #0000000f, #ffffff00 20vh), linear-gradient(to left, black, black 5vw, #000000a3, #00000045, #0000000f, #ffffff00 15vw), white
       align-items: center
       .summary-block
-        max-width: 40vw
-        margin-bottom: 16vh
+        max-width: 48vw
+        margin-bottom: 40px
         .head
           font-size: 1.9rem
           font-weight: bold
         .text
           padding-top: 8%
           padding-right: 5%
-          font-size: 1.5rem
+          font-size: 1rem
       .links-block
         max-width: 40vw
         width: 100%
@@ -209,6 +209,17 @@ html
   transform: translateX(-50%)
   cursor: pointer
   z-index: 3
+  .arrow-name
+    font-size: 2rem
+    font-family: 'title', serif
+    font-weight: bold
+    color: white
+    position: absolute
+    top: -41px
+    left: 50%
+    text-transform: uppercase
+    transform: translateX(-50%)
+    white-space: nowrap
   .arrow-canvas-wrapper
     width: 100%
     height: 100%
@@ -216,6 +227,8 @@ html
   bottom: unset
   top: 0
   transform: translateX(-50%) rotateZ(180deg)
+  .arrow-name
+    transform: translateX(-50%) rotate(180deg)
 
 @keyframes light-up
   from
